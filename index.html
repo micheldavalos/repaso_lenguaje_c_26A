@@ -219,10 +219,9 @@
     }
   }
 
-  printf("Acumulado de los primeros 10 números pares: %d", acum);
+  printf("Acumulado de los primeros 10 números pares: %i", acum);
   return 0;
 }</code></pre>
-        <div class="footer-ref">Libro pág. 92 | PDF pág. 105</div>
     </div>
 
     <!-- Diapositiva 3: Ejercicio 2 -->
@@ -316,13 +315,13 @@ int main() {
 
   <span class="keyword">switch</span>(op) {
     <span class="keyword">case</span> '+': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
-    <span class="comment">// Continúa en la siguiente diapositiva...</span></code></pre>
+    <span class="comment">// Continúa...</span></code></pre>
     </div>
 
     <!-- Diapositiva 7: Ejercicio 5 - Parte B -->
     <div class="slide-container" id="slide7">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 5.</span> Implementación de los casos restantes y manejo de errores. (Parte 2)</p>
+            <p><span class="exercise-number">Ejercicio 5.</span> Lógica de la calculadora (Parte 2).</p>
         </div>
         <pre><code>    <span class="keyword">case</span> '-': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
     <span class="keyword">case</span> '*': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
@@ -340,22 +339,22 @@ int main() {
     <!-- Diapositiva 8: Ejercicio 6 -->
     <div class="slide-container" id="slide8">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 6.</span> Introducir un número entero y contar cuántos dígitos tiene utilizando una estructura do-while.</p>
+            <p><span class="exercise-number">Ejercicio 6.</span> Introducir un número entero y contar sus dígitos (do-while).</p>
         </div>
         <pre><code>#include &lt;stdio.h&gt;
 
 int main() {
   int n, c = <span class="blank-space">____</span>;
   printf("Dame un número entero: ");
-  scanf("<span class="blank-space">____</span>", <span class="blank-space">____</span>);
+  scanf("<span class="blank-space">%i</span>", <span class="blank-space">&n</span>);
 
-  <span class="blank-space">____</span>
+  <span class="blank-space">do</span>
   {
     n = <span class="blank-space">________</span>;
     c = <span class="blank-space">________</span>;
   } <span class="blank-space">while (_______)</span>;
 
-  printf("El número tiene %i dígitos", <span class="blank-space">____</span>);
+  printf("El número tiene %i dígitos", <span class="blank-space">c</span>);
   return 0;
 }</code></pre>
     </div>
@@ -363,30 +362,22 @@ int main() {
     <!-- Diapositiva 9: Ejercicio 7 -->
     <div class="slide-container" id="slide9">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 7.</span> Leer un número entero 'd' y calcular la suma de la siguiente serie armónica utilizando un ciclo <strong>for</strong>:</p>
+            <p><span class="exercise-number">Ejercicio 7.</span> Calcular la serie armónica utilizando <strong>for</strong>:</p>
             <div class="math-series">
-                1 + 
-                <div class="fraction"><span class="num">1</span><span class="den">2</span></div> + 
-                <div class="fraction"><span class="num">1</span><span class="den">3</span></div> + 
-                ... + 
-                <div class="fraction"><span class="num">1</span><span class="den">d</span></div>
+                1 + <div class="fraction"><span class="num">1</span><span class="den">2</span></div> + ... + <div class="fraction"><span class="num">1</span><span class="den">d</span></div>
             </div>
         </div>
-        <pre><code>#include &lt;stdio.h&gt;
-
-int main() {
+        <pre><code>int main() {
   <span class="blank-space">____</span> d, i;
   <span class="blank-space">_____</span> suma = <span class="blank-space">0</span>;
-
-  <span class="blank-space">_______</span>("Dame el valor de d: ");
-  <span class="blank-space">_______</span>("<span class="blank-space">____</span>", <span class="blank-space">____</span>);
+  printf("Dame d: "); scanf("%i", &d);
 
   for (<span class="blank-space">_______</span>; <span class="blank-space">_______</span>; <span class="blank-space">_______</span>) 
   {
     suma = <span class="blank-space">____________________</span>;
   }
 
-  printf("La suma de la serie es: <span class="blank-space">____</span>", <span class="blank-space">____</span>);
+  printf("Suma: %f", suma);
   return 0;
 }</code></pre>
     </div>
@@ -394,11 +385,9 @@ int main() {
     <!-- Diapositiva 10: Ejercicio 8 -->
     <div class="slide-container" id="slide10">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 8.</span> Sumar los elementos contenidos en un arreglo unidimensional de 10 enteros inicializado con valores fijos y mostrar el resultado.</p>
+            <p><span class="exercise-number">Ejercicio 8.</span> Sumar elementos de un arreglo inicializado.</p>
         </div>
-        <pre><code>#include &lt;stdio.h&gt;
-
-int main() {
+        <pre><code>int main() {
   int x[10]={6,7,9,2,4,7,4,3,2,9};
   int i, s = <span class="blank-space">____</span>;
 
@@ -407,44 +396,72 @@ int main() {
     <span class="blank-space">___________</span>;
   }
 
-  printf("La suma es <span class="blank-space">____</span>", <span class="blank-space">____</span>);
+  printf("La suma es %i", s);
   return 0;
 }</code></pre>
     </div>
 
-    <!-- Diapositiva 11: Solucionario -->
+    <!-- Diapositiva 11: Ejercicio 9 - Parte 1 -->
     <div class="slide-container" id="slide11">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 9.</span> Subprogramas y funciones. (Parte 1)</p>
+        </div>
+        <pre><code>#include &lt;stdio.h&gt;
+int d;
+int Subpro_1 (int m);
+void Subpro_2 (int i);
+
+void Subpro_2 (int i) {
+    if (Subpro_1(i) > 2) printf("%i\n", i * 5);
+    else printf ("%i\n", i * 3);
+}
+
+float Subpro_3 (<span class="blank-space">_______ r</span>, float s) {
+    <span class="blank-space">_______</span> w; 
+    if (r > s) w = r / s;
+    else w = s / r;
+    return w;
+}</code></pre>
+    </div>
+
+    <!-- Diapositiva 12: Ejercicio 9 - Parte 2 -->
+    <div class="slide-container" id="slide12">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 9.</span> Función principal (Parte 2).</p>
+        </div>
+        <pre><code>int main() {
+    float a = 7, b = 5, c;
+    c = Subpro_3(<span class="blank-space">___</span>, b); 
+    printf ("%f\n", c);
+    for (d = 2; d < 9; d += 2) {
+        Subpro_2(d);
+    }
+    return 0;
+}
+
+<span class="blank-space">___</span> Subpro_1 (int m) {
+    int w = m / 2;
+    return w;
+}</code></pre>
+    </div>
+
+    <!-- Diapositiva 13: Solucionario -->
+    <div class="slide-container" id="slide13">
         <div class="description-box" style="border-left-color: var(--ctp-green);">
             <p style="font-style: normal; font-weight: 700;">Solucionario Maestro</p>
         </div>
         <div class="solution-grid">
             <div>
                 <pre><code><span class="comment">// 1. While</span>
-<span class="keyword">while</span> (c <= <span class="number">10</span>) {
-  <span class="keyword">scanf</span>(<span class="string">"%i"</span>, &n);
-  <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>) {
-    acum += n; c++;
-  }
-}</code></pre>
-            </div>
-            <div>
-                <pre><code><span class="comment">// 2. Alberca</span>
-<span class="keyword">if</span> (tipo == <span class="number">1</span>)
-  tot = (ins + men) * <span class="number">0.5</span>;
-<span class="keyword">else</span>
-  tot = ins + men;</code></pre>
+<span class="keyword">while</span> (c <= <span class="number">10</span>)
+<span class="keyword">scanf</span>(<span class="string">"%i"</span>, &n);
+acum += n; c++;</code></pre>
             </div>
             <div>
                 <pre><code><span class="comment">// 3. Tienda</span>
-vta = (lib * p_lib) + 
-      (cua * p_cua) + 
-      (plu * p_plu);</code></pre>
-            </div>
-            <div>
-                <pre><code><span class="comment">// 4. Teclas</span>
-<span class="keyword">scanf</span>(<span class="string">" %c"</span>, &t);
-<span class="keyword">if</span> (t >= <span class="string">'A'</span> && t <= <span class="string">'Z'</span>)
-<span class="keyword">else if</span> (t >= <span class="string">'a'</span>)</code></pre>
+<span class="type">float</span> p_lib, p_cua...
+venta = (lib*p_lib) + 
+        (cua*p_cua)...;</code></pre>
             </div>
             <div>
                 <pre><code><span class="comment">// 5. Calc</span>
@@ -454,24 +471,20 @@ vta = (lib * p_lib) +
 }</code></pre>
             </div>
             <div>
-                <pre><code><span class="comment">// 6. Dígitos</span>
-<span class="keyword">do</span> {
-  n /= <span class="number">10</span>;
-  c++;
-} <span class="keyword">while</span> (n > <span class="number">0</span>);</code></pre>
-            </div>
-            <div>
                 <pre><code><span class="comment">// 7. Serie</span>
-<span class="keyword">for</span> (i = <span class="number">1</span>; i <= d; i++) { 
-  suma += (<span class="number">1.0</span> / i); 
-}</code></pre>
+<span class="keyword">for</span>(i=1; i<=d; i++)
+suma += (1.0/i);</code></pre>
             </div>
             <div>
-                <pre><code><span class="comment">// 8. Suma Arreglo</span>
-x[10]={6,7,9,2,4,7,4,3,2,9};
-<span class="keyword">for</span> (i = <span class="number">0</span>; i < <span class="number">10</span>; i++) { 
-  s += x[i]; 
-}</code></pre>
+                <pre><code><span class="comment">// 8. Arreglo</span>
+s = 0;
+s += x[i];</code></pre>
+            </div>
+            <div style="grid-column: span 3;">
+                <pre><code><span class="comment">// 9. Subprogramas</span>
+<span class="keyword">printf</span>(<span class="string">"%i\n"</span>, i * 5);
+c = Subpro_3(a, b);
+<span class="type">int</span> Subpro_1(int m) { ... }</code></pre>
             </div>
         </div>
     </div>
