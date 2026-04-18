@@ -159,14 +159,14 @@
 
         .solution-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 12px;
             width: 100%;
         }
 
         .solution-grid pre {
-            font-size: 10px;
-            padding: 8px;
+            font-size: 11px;
+            padding: 10px;
             border-top: 3px solid var(--ctp-green);
         }
 
@@ -449,41 +449,67 @@ float Subpro_3 (<span class="blank-space">_______ r</span>, float s) {
 }</code></pre>
     </div>
 
-    <!-- Diapositiva 13: Solucionario -->
+    <!-- Diapositiva 13: Solucionario Completo (1-9) -->
     <div class="slide-container" id="slide13">
         <div class="description-box" style="border-left-color: var(--ctp-green);">
-            <p style="font-style: normal; font-weight: 700;">Solucionario Maestro</p>
+            <p style="font-style: normal; font-weight: 700;">Solucionario Maestro: Ejercicios 1 - 9</p>
         </div>
         <div class="solution-grid">
             <div>
+                <pre><code><span class="comment">// 1. While (Pares)</span>
+<span class="keyword">while</span>(c <= <span class="number">10</span>) {
+  <span class="keyword">scanf</span>(<span class="string">"%i"</span>,&n);
+  <span class="keyword">if</span>(n%2==0){acum+=n;c++;}
+}</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 2. Alberca</span>
+ins=100, men=150;
+<span class="keyword">if</span>(tipo==1)
+  tot=(ins+men)*0.5;</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 3. Tienda</span>
+vta=(lib*100) + 
+    (cua*15.5) + 
+    (plu*2.35);</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 4. Teclas</span>
+<span class="keyword">scanf</span>(<span class="string">" %c"</span>,&t);
+<span class="keyword">else if</span>(t>='a'&&t<='z')
+<span class="keyword">else if</span>(t>='0'&&t<='9')</code></pre>
+            </div>
+            <div>
                 <pre><code><span class="comment">// 5. Calculadora</span>
-<span class="keyword">scanf</span>(<span class="string">" %c"</span>, &op);
-<span class="keyword">scanf</span>(<span class="string">"%i"</span>, &n1);
-<span class="keyword">switch</span>(op) { ... }</code></pre>
+<span class="keyword">switch</span>(op){
+ <span class="keyword">case</span> <span class="string">'/'</span>: if(n2!=0)
+ res=(float)n1/n2;
+}</code></pre>
             </div>
             <div>
                 <pre><code><span class="comment">// 6. Dígitos</span>
-c = 0;
 <span class="keyword">do</span> {
   n /= 10; c++;
-} <span class="keyword">while</span> (n > 0);</code></pre>
+} <span class="keyword">while</span>(n > 0);</code></pre>
             </div>
             <div>
-                <pre><code><span class="comment">// 7. Serie</span>
-<span class="keyword">for</span>(i=1; i<=d; i++)
-suma += (1.0/i);</code></pre>
+                <pre><code><span class="comment">// 7. Serie Armónica</span>
+<span class="keyword">for</span>(i=1;i<=d;i++){
+ suma += (1.0/i);
+}</code></pre>
             </div>
             <div>
-                <pre><code><span class="comment">// 8. Arreglo</span>
-s = 0;
-<span class="keyword">for</span>(i=0; i<10; i++)
-s += x[i];</code></pre>
+                <pre><code><span class="comment">// 8. Suma Arreglo</span>
+<span class="keyword">for</span>(i=0;i<10;i++){
+ s += x[i];
+}</code></pre>
             </div>
-            <div style="grid-column: span 4;">
+            <div>
                 <pre><code><span class="comment">// 9. Subprogramas</span>
-<span class="keyword">printf</span>(<span class="string">"%i\n"</span>, i * 5);
 c = Subpro_3(a, b);
-<span class="type">int</span> Subpro_1(int m) { ... }</code></pre>
+<span class="type">int</span> Subpro_1(int m)
+{ return m/2; }</code></pre>
             </div>
         </div>
     </div>
