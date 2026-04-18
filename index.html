@@ -106,7 +106,6 @@
             margin-right: 10px;
         }
 
-        /* Estilo para la fórmula visual */
         .math-series {
             display: flex;
             align-items: center;
@@ -160,14 +159,14 @@
 
         .solution-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
             width: 100%;
         }
 
         .solution-grid pre {
-            font-size: 11px;
-            padding: 10px;
+            font-size: 10px;
+            padding: 8px;
             border-top: 3px solid var(--ctp-green);
         }
 
@@ -341,7 +340,6 @@ main() {
             <p><span class="exercise-number">Ejercicio 6.</span> Introducir un número entero y contar cuántos dígitos tiene utilizando una estructura do-while.</p>
         </div>
         <pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
 
 main() {
   int n, c = <span class="blank-space">____</span>;
@@ -355,11 +353,10 @@ main() {
   } <span class="blank-space">while (_______)</span>;
 
   printf("El número tiene %i dígitos", <span class="blank-space">____</span>);
-  getch();
 }</code></pre>
     </div>
 
-    <!-- Diapositiva 9: Ejercicio 7 (Serie Armónica Formateada) -->
+    <!-- Diapositiva 9: Ejercicio 7 -->
     <div class="slide-container" id="slide9">
         <div class="description-box">
             <p><span class="exercise-number">Ejercicio 7.</span> Leer un número entero 'd' y calcular la suma de la siguiente serie armónica utilizando un ciclo <strong>for</strong>:</p>
@@ -390,14 +387,35 @@ main() {
 }</code></pre>
     </div>
 
-    <!-- Diapositiva 10: Solucionario -->
+    <!-- Diapositiva 10: Ejercicio 8 -->
     <div class="slide-container" id="slide10">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 8.</span> Sumar los elementos contenidos en un arreglo unidimensional de 10 enteros inicializado con valores fijos y mostrar el resultado.</p>
+        </div>
+        <pre><code>#include &lt;stdio.h&gt;
+
+main() {
+  int x[10]={6,7,9,2,4,7,4,3,2,9};
+  int i, s = <span class="blank-space">____</span>;
+
+  for (<span class="blank-space">_______</span>; <span class="blank-space">_______</span>; <span class="blank-space">_______</span>) 
+  {
+    <span class="blank-space">___________</span>;
+  }
+
+  printf("La suma es <span class="blank-space">____</span>", <span class="blank-space">____</span>);
+  return 0;
+}</code></pre>
+    </div>
+
+    <!-- Diapositiva 11: Solucionario -->
+    <div class="slide-container" id="slide11">
         <div class="description-box" style="border-left-color: var(--ctp-green);">
             <p style="font-style: normal; font-weight: 700;">Solucionario Maestro</p>
         </div>
         <div class="solution-grid">
             <div>
-                <pre><code><span class="comment">// 1. While (Pares)</span>
+                <pre><code><span class="comment">// 1. While</span>
 <span class="keyword">while</span> (c <= <span class="number">10</span>) {
   <span class="keyword">scanf</span>(<span class="string">"%i"</span>, &n);
   <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>) {
@@ -425,7 +443,7 @@ vta = (lib * p_lib) +
 <span class="keyword">else if</span> (t >= <span class="string">'a'</span>)</code></pre>
             </div>
             <div>
-                <pre><code><span class="comment">// 5. Calculadora</span>
+                <pre><code><span class="comment">// 5. Calc</span>
 <span class="keyword">switch</span>(op) {
   <span class="keyword">case</span> <span class="string">'/'</span>: res = n1/n2;
   <span class="keyword">default</span>: printf(<span class="string">"Err"</span>);
@@ -438,11 +456,17 @@ vta = (lib * p_lib) +
   c++;
 } <span class="keyword">while</span> (n > <span class="number">0</span>);</code></pre>
             </div>
-            <div style="grid-column: span 3;">
-                <pre><code><span class="comment">// 7. Serie Armónica</span>
-suma = <span class="number">0</span>;
+            <div>
+                <pre><code><span class="comment">// 7. Serie</span>
 <span class="keyword">for</span> (i = <span class="number">1</span>; i <= d; i++) { 
-  suma = suma + (<span class="number">1.0</span> / i); 
+  suma += (<span class="number">1.0</span> / i); 
+}</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 8. Suma Arreglo</span>
+x[10]={6,7,9,2,4,7,4,3,2,9};
+<span class="keyword">for</span> (i = <span class="number">0</span>; i < <span class="number">10</span>; i++) { 
+  s += x[i]; 
 }</code></pre>
             </div>
         </div>
