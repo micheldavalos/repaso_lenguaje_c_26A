@@ -106,6 +106,29 @@
             margin-right: 10px;
         }
 
+        /* Estilo para la fórmula visual */
+        .math-series {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+            font-family: "Merriweather", serif;
+            font-size: 24px;
+            color: var(--ctp-mauve);
+        }
+
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: middle;
+            font-size: 0.9em;
+        }
+
+        .num { border-bottom: 2px solid var(--ctp-mauve); padding: 0 5px; }
+        .den { padding: 0 5px; }
+
         pre {
             background: var(--ctp-crust);
             color: var(--ctp-text);
@@ -336,24 +359,30 @@ main() {
 }</code></pre>
     </div>
 
-    <!-- Diapositiva 9: Ejercicio 7 (Corrección: Serie Armónica) -->
+    <!-- Diapositiva 9: Ejercicio 7 (Serie Armónica Formateada) -->
     <div class="slide-container" id="slide9">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 7.</span> Leer un número entero 'd' y calcular la suma de la serie armónica: $1 + 1/2 + 1/3 + ... + 1/d$ utilizando un ciclo while.</p>
+            <p><span class="exercise-number">Ejercicio 7.</span> Leer un número entero 'd' y calcular la suma de la siguiente serie armónica utilizando un ciclo <strong>for</strong>:</p>
+            <div class="math-series">
+                1 + 
+                <div class="fraction"><span class="num">1</span><span class="den">2</span></div> + 
+                <div class="fraction"><span class="num">1</span><span class="den">3</span></div> + 
+                ... + 
+                <div class="fraction"><span class="num">1</span><span class="den">d</span></div>
+            </div>
         </div>
         <pre><code>#include &lt;stdio.h&gt;
 
 main() {
-  int d, i = <span class="blank-space">___</span>;
+  int d, i;
   float suma = <span class="blank-space">___</span>;
 
   printf("Dame el valor de d: ");
   scanf("<span class="blank-space">%i</span>", <span class="blank-space">&d</span>);
 
-  while (<span class="blank-space">_______</span>) 
+  for (<span class="blank-space">i = 1; _______; _______</span>) 
   {
     suma = <span class="blank-space">suma + (1.0 / i)</span>;
-    i = <span class="blank-space">_______</span>;
   }
 
   printf("La suma de la serie es: %f", suma);
@@ -410,11 +439,10 @@ vta = (lib * p_lib) +
 } <span class="keyword">while</span> (n > <span class="number">0</span>);</code></pre>
             </div>
             <div style="grid-column: span 3;">
-                <pre><code><span class="comment">// 7. Serie Armónica (Corregido)</span>
-i = <span class="number">1</span>; suma = <span class="number">0</span>;
-<span class="keyword">while</span> (i <= d) { 
+                <pre><code><span class="comment">// 7. Serie Armónica</span>
+suma = <span class="number">0</span>;
+<span class="keyword">for</span> (i = <span class="number">1</span>; i <= d; i++) { 
   suma = suma + (<span class="number">1.0</span> / i); 
-  i++; 
 }</code></pre>
             </div>
         </div>
