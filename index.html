@@ -295,7 +295,7 @@ int main() {
     <!-- Diapositiva 6: Ejercicio 5 - Parte A -->
     <div class="slide-container" id="slide6">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 5.</span> Leer un carácter y dos números enteros. Si el carácter es un operador aritmético, calcular la operación; si no, imprimir error. (Parte 1)</p>
+            <p><span class="exercise-number">Ejercicio 5.</span> Leer un carácter y dos números enteros por separado. Si el carácter es un operador aritmético, calcular la operación; si no, imprimir error. (Parte 1)</p>
         </div>
         <pre><code>#include &lt;stdio.h&gt;
 
@@ -304,26 +304,32 @@ int main() {
   int n1, n2;
 
   printf("Operador (+, -, *, /): ");
-  <span class="blank-space">_______</span>(" <span class="blank-space">%c</span>", <span class="blank-space">&op</span>);
+  <span class="blank-space">_______</span>("<span class="blank-space">____</span>", <span class="blank-space">____</span>);
   
-  printf("Ingrese dos números enteros: ");
-  <span class="blank-space">_______</span>("<span class="blank-space">%i %i</span>", <span class="blank-space">&n1, &n2</span>);
+  printf("Ingrese primer número: ");
+  <span class="blank-space">_______</span>("<span class="blank-space">____</span>", <span class="blank-space">____</span>);
 
-  <span class="keyword">switch</span>(op) {
-    <span class="keyword">case</span> '+': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
+  printf("Ingrese segundo número: ");
+  <span class="blank-space">_______</span>("<span class="blank-space">____</span>", <span class="blank-space">____</span>);
+
+  <span class="keyword">switch</span>(<span class="blank-space">____</span>) {
+    <span class="keyword">case</span> <span class="blank-space">'___'</span>: printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
     <span class="comment">// Continúa...</span></code></pre>
     </div>
 
     <!-- Diapositiva 7: Ejercicio 5 - Parte B -->
     <div class="slide-container" id="slide7">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 5.</span> Lógica de la calculadora y manejo de errores. (Parte 2)</p>
+            <p><span class="exercise-number">Ejercicio 5.</span> Lógica de los casos restantes y manejo de la división. (Parte 2)</p>
         </div>
-        <pre><code>    <span class="keyword">case</span> '-': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
-    <span class="keyword">case</span> '*': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
-    <span class="keyword">case</span> '/': 
-      if(n2 != 0) printf("Resultado: %.2f", (float)<span class="blank-space">_____ / _____</span>);
-      else printf("Error: División por cero");
+        <pre><code>    <span class="keyword">case</span> <span class="blank-space">'___'</span>: printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="blank-space">'___'</span>: printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="blank-space">'___'</span>: 
+      if(<span class="blank-space">_______</span>) {
+          printf("Resultado: %.2f", (float)<span class="blank-space">_______</span> / <span class="blank-space">_______</span>);
+      } else {
+          printf("Error: División por cero");
+      }
       <span class="keyword">break</span>;
     <span class="keyword">default</span>: 
       <span class="blank-space">________________________________________</span>;
@@ -335,22 +341,22 @@ int main() {
     <!-- Diapositiva 8: Ejercicio 6 -->
     <div class="slide-container" id="slide8">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 6.</span> Introducir un número entero y contar cuántos dígitos tiene utilizando una estructura do-while.</p>
+            <p><span class="exercise-number">Ejercicio 6.</span> Introducir un número entero y contar cuántos dígitos tiene utilizando una estructura <strong>do-while</strong>.</p>
         </div>
         <pre><code>#include &lt;stdio.h&gt;
 
 int main() {
   int n, c = <span class="blank-space">____</span>;
   printf("Ingrese un número entero: ");
-  scanf("<span class="blank-space">%i</span>", <span class="blank-space">&n</span>);
+  <span class="blank-space">_______</span>("<span class="blank-space">____</span>", <span class="blank-space">____</span>);
 
-  <span class="blank-space">do</span>
+  <span class="blank-space">____</span>
   {
     n = <span class="blank-space">________</span>;
     c = <span class="blank-space">________</span>;
   } <span class="blank-space">while (_______)</span>;
 
-  printf("El número tiene %i dígitos", c);
+  printf("El número tiene %i dígitos", <span class="blank-space">____</span>);
   return 0;
 }</code></pre>
     </div>
@@ -448,23 +454,17 @@ float Subpro_3 (<span class="blank-space">_______ r</span>, float s) {
         </div>
         <div class="solution-grid">
             <div>
-                <pre><code><span class="comment">// 1. While</span>
-<span class="keyword">while</span> (c <= <span class="number">10</span>)
-<span class="keyword">scanf</span>(<span class="string">"%i"</span>, &n);
-acum += n; c++;</code></pre>
-            </div>
-            <div>
-                <pre><code><span class="comment">// 2. Alberca</span>
-ins = 100, men = 150;
-<span class="keyword">if</span> (tipo == 1)
-  tot = (ins+men)*0.5;</code></pre>
-            </div>
-            <div>
                 <pre><code><span class="comment">// 5. Calculadora</span>
-<span class="keyword">switch</span>(op) {
-  <span class="keyword">case</span> <span class="string">'/'</span>: res = n1/n2;
-  <span class="keyword">default</span>: printf(<span class="string">"Error"</span>);
-}</code></pre>
+<span class="keyword">scanf</span>(<span class="string">" %c"</span>, &op);
+<span class="keyword">scanf</span>(<span class="string">"%i"</span>, &n1);
+<span class="keyword">switch</span>(op) { ... }</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 6. Dígitos</span>
+c = 0;
+<span class="keyword">do</span> {
+  n /= 10; c++;
+} <span class="keyword">while</span> (n > 0);</code></pre>
             </div>
             <div>
                 <pre><code><span class="comment">// 7. Serie</span>
@@ -474,9 +474,10 @@ suma += (1.0/i);</code></pre>
             <div>
                 <pre><code><span class="comment">// 8. Arreglo</span>
 s = 0;
+<span class="keyword">for</span>(i=0; i<10; i++)
 s += x[i];</code></pre>
             </div>
-            <div style="grid-column: span 3;">
+            <div style="grid-column: span 4;">
                 <pre><code><span class="comment">// 9. Subprogramas</span>
 <span class="keyword">printf</span>(<span class="string">"%i\n"</span>, i * 5);
 c = Subpro_3(a, b);
