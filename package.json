@@ -1,0 +1,11 @@
+{
+  "name": "repaso-lenguaje-c",
+  "version": "1.0.0",
+  "description": "Ejercicios de Programación en C",
+  "scripts": {
+    "start": "serve . -l $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}
