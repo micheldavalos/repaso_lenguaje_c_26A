@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Programación - Catppuccin Latte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Merriweather:wght@400;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* PALETA CATPPUCCIN LATTE */
+        :root {
+            --ctp-rosewater: #dc8a78;
+            --ctp-flamingo: #dd7878;
+            --ctp-pink: #ea76cb;
+            --ctp-mauve: #8839ef;
+            --ctp-red: #d20f39;
+            --ctp-maroon: #e64553;
+            --ctp-peach: #fe640b;
+            --ctp-yellow: #df8e1d;
+            --ctp-green: #40a02b;
+            --ctp-teal: #179299;
+            --ctp-sky: #04a5e5;
+            --ctp-sapphire: #209fb5;
+            --ctp-blue: #1e66f5;
+            --ctp-lavender: #7287fd;
+            --ctp-text: #4c4f69;
+            --ctp-subtext1: #5c5f77;
+            --ctp-subtext0: #6c6f85;
+            --ctp-overlay2: #7c7f93;
+            --ctp-overlay1: #8c8fa1;
+            --ctp-overlay0: #9ca0b0;
+            --ctp-surface2: #acb0be;
+            --ctp-surface1: #bcc0cc;
+            --ctp-surface0: #ccd0da;
+            --ctp-base: #eff1f5;
+            --ctp-mantle: #e6e9ef;
+            --ctp-crust: #dce0e8;
+        }
+
+        * { box-sizing: border-box; }
+        
+        body {
+            background-color: var(--ctp-mantle);
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+            margin: 0;
+            min-height: 100vh;
+            padding: 20px 0;
+            place-items: center;
+        }
+
+        .slide-container {
+            align-items: flex-start;
+            background-color: var(--ctp-base);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            height: 720px;
+            justify-content: flex-start;
+            overflow: hidden;
+            padding: 60px 80px;
+            position: relative;
+            width: 1280px;
+            color: var(--ctp-text);
+        }
+
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 12px;
+            background: linear-gradient(to bottom, var(--ctp-blue), var(--ctp-mauve));
+        }
+
+        h1 {
+            color: var(--ctp-base);
+            font-family: "Merriweather", serif;
+            font-size: 72px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .description-box {
+            background: var(--ctp-mantle);
+            border-left: 5px solid var(--ctp-lavender);
+            padding: 20px 30px;
+            margin-bottom: 25px;
+            border-radius: 0 12px 12px 0;
+            width: 100%;
+        }
+
+        .description-box p {
+            color: var(--ctp-subtext1);
+            font-size: 20px;
+            line-height: 1.5;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .exercise-number {
+            color: var(--ctp-blue);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        pre {
+            background: var(--ctp-crust);
+            color: var(--ctp-text);
+            padding: 25px;
+            border-radius: 16px;
+            font-size: 18px;
+            font-family: 'Fira Code', monospace;
+            width: 100%;
+            border: 1px solid var(--ctp-surface0);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            margin: 0;
+            overflow-x: auto;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .blank-space {
+            color: var(--ctp-teal);
+            font-weight: 700;
+            background: var(--ctp-surface0);
+            padding: 0 8px;
+            border-radius: 4px;
+        }
+
+        .title-slide-bg {
+            background: linear-gradient(135deg, var(--ctp-blue) 0%, var(--ctp-mauve) 100%);
+            height: 100%; justify-content: center; align-items: center; text-align: center; width: 100%; display: flex; flex-direction: column;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            width: 100%;
+        }
+
+        .solution-grid pre {
+            font-size: 11px;
+            padding: 10px;
+            border-top: 3px solid var(--ctp-green);
+        }
+
+        /* Syntax Highlighting */
+        .keyword { color: var(--ctp-mauve); }
+        .type { color: var(--ctp-yellow); }
+        .string { color: var(--ctp-green); }
+        .number { color: var(--ctp-peach); }
+        .comment { color: var(--ctp-overlay0); font-style: italic; }
+
+        .footer-ref {
+            position: absolute;
+            bottom: 20px;
+            right: 80px;
+            font-size: 14px;
+            color: var(--ctp-overlay1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Diapositiva 1: Portada -->
+    <div class="slide-container" id="slide1" style="padding: 0;">
+        <div class="title-slide-bg">
+            <h1>Laboratorio de Lenguaje C</h1>
+            <p style="color: var(--ctp-crust); font-size: 28px; font-weight: 500;">Guía Maestra de Ejercicios</p>
+            <div style="margin-top: 40px; background: var(--ctp-base); color: var(--ctp-blue); padding: 12px 45px; border-radius: 50px; font-weight: 700; letter-spacing: 1px;">
+                TALLER DE LÓGICA Y ALGORITMOS
+            </div>
+        </div>
+    </div>
+
+    <!-- Diapositiva 2: Ejercicio 1 -->
+    <div class="slide-container" id="slide2">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 1.</span> El programa debe leer una lista de números y, al finalizar, imprimir la suma acumulada de los primeros 10 números pares.</p>
+        </div>
+        <pre><code>main() {
+  int c = 1, acum = 0, numero;
+
+  while (<span class="blank-space">___________</span>) 
+  {
+    printf("Escriba un número entero\n");
+    <span class="blank-space">_____________________</span>
+
+    if (<span class="blank-space">__________________</span>) 
+    {
+       acum = <span class="blank-space">__________________</span>;
+       c = <span class="blank-space">__________________</span>;
+    }
+  }
+
+  printf("Acumulado de los primeros 10 números pares: %d", acum);
+}</code></pre>
+        <div class="footer-ref">Libro pág. 92 | PDF pág. 105</div>
+    </div>
+
+    <!-- Diapositiva 3: Ejercicio 2 -->
+    <div class="slide-container" id="slide3">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 2.</span> Calcule el monto del pago de una persona al inscribirse en la alberca olímpica. Si es alumno se le hará un 50% de descuento tanto en la inscripción ($100) como en la mensualidad ($150).</p>
+        </div>
+        <pre><code>#include &lt;stdio.h&gt;
+
+main() {
+  int tipo;
+  float <span class="blank-space">ins = 100</span>, <span class="blank-space">men = 150</span>, total;
+  
+  printf("¿Es alumno de la Universidad? (1-Si, 2-No): ");
+  scanf("<span class="blank-space">%i</span>", &tipo);
+
+  if (<span class="blank-space">___________</span>) {
+    total = (<span class="blank-space">_____</span> + <span class="blank-space">_____</span>) * <span class="blank-space">_____</span>;
+  } else {
+    total = <span class="blank-space">_____</span> + <span class="blank-space">_____</span>;
+  }
+
+  printf("Monto total a pagar: $%.2f", total);
+}</code></pre>
+    </div>
+
+    <!-- Diapositiva 4: Ejercicio 3 -->
+    <div class="slide-container" id="slide4">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 3.</span> Una tienda vende libros a $100, cuadernos a $15.50 y plumas a $2.35. Calcule el monto total de una venta según el número de artículos vendidos.</p>
+        </div>
+        <pre><code>#include &lt;stdio.h&gt;
+
+main() {
+  <span class="blank-space">____</span> libros, cuadernos, plumas;
+  <span class="blank-space">_____</span> p_lib = 100, p_cuad = 15.5, p_plum = 2.35, <span class="blank-space">_____</span>;
+  
+  printf("Libros: "); <span class="blank-space">_______</span>("%i", <span class="blank-space">_______</span>);
+  printf("Cuadernos: "); <span class="blank-space">_______</span>("%i", <span class="blank-space">_______</span>);
+  printf("Plumas: "); <span class="blank-space">_______</span>("%i", <span class="blank-space">_______</span>);
+
+  <span class="blank-space">____________________________________________________________;</span>
+
+  printf("Monto total de la venta: $%.2f", <span class="blank-space">_____</span>);
+}</code></pre>
+    </div>
+
+    <!-- Diapositiva 5: Ejercicio 4 -->
+    <div class="slide-container" id="slide5">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 4.</span> Oprimir una tecla e imprimir qué tipo de tecla es (letra mayúscula, letra minúscula, dígito o carácter especial).</p>
+        </div>
+        <pre><code>#include &lt;stdio.h&gt;
+
+main() {
+  char t;
+  printf("Ingrese un carácter: ");
+  <span class="blank-space">_______</span>("<span class="blank-space"> %c</span>", <span class="blank-space">&t</span>); 
+
+  if (t >= 'A' && t <= 'Z')
+    printf("\nEs una letra Mayúscula");
+  else if (<span class="blank-space">_________________________</span>)
+    printf("\nEs una letra Minúscula");
+  else if (<span class="blank-space">_________________________</span>)
+    printf("\nEs un Dígito");
+  else
+    printf("\nEs un Carácter Especial");
+
+  return 0;
+}</code></pre>
+    </div>
+
+    <!-- Diapositiva 6: Ejercicio 5 - Parte A -->
+    <div class="slide-container" id="slide6">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 5.</span> Leer un carácter y dos números enteros. Si el carácter es un operador aritmético calcular la operación; de lo contrario, imprimir error. (Parte 1)</p>
+        </div>
+        <pre><code>#include &lt;stdio.h&gt;
+
+main() {
+  char op;
+  int n1, n2;
+
+  printf("Operador (+, -, *, /): ");
+  <span class="blank-space">_______</span>(" <span class="blank-space">%c</span>", <span class="blank-space">&op</span>);
+  
+  printf("Ingrese dos números enteros: ");
+  <span class="blank-space">_______</span>("<span class="blank-space">%i %i</span>", <span class="blank-space">&n1, &n2</span>);
+
+  <span class="keyword">switch</span>(op) {
+    <span class="keyword">case</span> '+': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
+    <span class="comment">// Continúa en la siguiente diapositiva...</span></code></pre>
+    </div>
+
+    <!-- Diapositiva 7: Ejercicio 5 - Parte B -->
+    <div class="slide-container" id="slide7">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 5.</span> Implementación de los casos restantes y manejo de errores. (Parte 2)</p>
+        </div>
+        <pre><code>    <span class="keyword">case</span> '-': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
+    <span class="keyword">case</span> '*': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
+    <span class="keyword">case</span> '/': 
+      if(n2 != 0) printf("Resultado: %.2f", (float)<span class="blank-space">_____ / _____</span>);
+      else printf("Error: División por cero");
+      <span class="keyword">break</span>;
+    <span class="keyword">default</span>: 
+      <span class="blank-space">________________________________________</span>;
+  }
+  return 0;
+}</code></pre>
+    </div>
+
+    <!-- Diapositiva 8: Ejercicio 6 -->
+    <div class="slide-container" id="slide8">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 6.</span> Introducir un número entero y contar cuántos dígitos tiene utilizando una estructura do-while.</p>
+        </div>
+        <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+main() {
+  int n, c = <span class="blank-space">____</span>;
+  printf("Dame un número entero: ");
+  scanf("<span class="blank-space">____</span>", <span class="blank-space">____</span>);
+
+  <span class="blank-space">____</span>
+  {
+    n = <span class="blank-space">________</span>;
+    c = <span class="blank-space">________</span>;
+  } <span class="blank-space">while (_______)</span>;
+
+  printf("El número tiene %i dígitos", <span class="blank-space">____</span>);
+  getch();
+}</code></pre>
+    </div>
+
+    <!-- Diapositiva 9: Ejercicio 7 -->
+    <div class="slide-container" id="slide9">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 7.</span> Leer 5 calificaciones, calcular su suma y obtener el promedio final utilizando un ciclo while.</p>
+        </div>
+        <pre><code>#include &lt;stdio.h&gt;
+
+main() {
+  float calif, sum = <span class="blank-space">___</span>, prom;
+  int c = <span class="blank-space">___</span>;
+
+  while (<span class="blank-space">c <= 5</span>) 
+  {
+    printf("Dame calificación: ");
+    scanf("<span class="blank-space">%f</span>", <span class="blank-space">&calif</span>);
+    
+    sum = <span class="blank-space">__________</span>;
+    c = <span class="blank-space">__________</span>;
+  }
+
+  prom = <span class="blank-space">________</span>;
+  printf("Promedio = %.2f", prom);
+  return 0;
+}</code></pre>
+    </div>
+
+    <!-- Diapositiva 10: Solucionario -->
+    <div class="slide-container" id="slide10">
+        <div class="description-box" style="border-left-color: var(--ctp-green);">
+            <p style="font-style: normal; font-weight: 700;">Solucionario Maestro</p>
+        </div>
+        <div class="solution-grid">
+            <div>
+                <pre><code><span class="comment">// 1. While (Pares)</span>
+<span class="keyword">while</span> (c <= <span class="number">10</span>) {
+  <span class="keyword">scanf</span>(<span class="string">"%i"</span>, &n);
+  <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>) {
+    acum += n; c++;
+  }
+}</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 2. Alberca</span>
+<span class="keyword">if</span> (tipo == <span class="number">1</span>)
+  tot = (ins + men) * <span class="number">0.5</span>;
+<span class="keyword">else</span>
+  tot = ins + men;</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 3. Tienda</span>
+vta = (lib * p_lib) + 
+      (cua * p_cua) + 
+      (plu * p_plu);</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 4. Teclas</span>
+<span class="keyword">scanf</span>(<span class="string">" %c"</span>, &t);
+<span class="keyword">if</span> (t >= <span class="string">'A'</span> && t <= <span class="string">'Z'</span>)
+<span class="keyword">else if</span> (t >= <span class="string">'a'</span>)</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 5. Calculadora</span>
+<span class="keyword">switch</span>(op) {
+  <span class="keyword">case</span> <span class="string">'/'</span>: res = n1/n2;
+  <span class="keyword">default</span>: printf(<span class="string">"Err"</span>);
+}</code></pre>
+            </div>
+            <div>
+                <pre><code><span class="comment">// 6. Dígitos</span>
+<span class="keyword">do</span> {
+  n /= <span class="number">10</span>;
+  c++;
+} <span class="keyword">while</span> (n > <span class="number">0</span>);</code></pre>
+            </div>
+            <div style="grid-column: span 3;">
+                <pre><code><span class="comment">// 7. Promedio (Nuevo)</span>
+<span class="keyword">while</span> (c <= <span class="number">5</span>) { 
+  <span class="keyword">scanf</span>(<span class="string">"%f"</span>, &calif); 
+  sum += calif; c++; 
+}
+prom = sum / <span class="number">5</span>;</code></pre>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
