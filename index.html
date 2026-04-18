@@ -191,18 +191,14 @@
     <!-- Diapositiva 1: Portada -->
     <div class="slide-container" id="slide1" style="padding: 0;">
         <div class="title-slide-bg">
-            <h1>Laboratorio de Lenguaje C</h1>
-            <p style="color: var(--ctp-crust); font-size: 28px; font-weight: 500;">Guía Maestra de Ejercicios</p>
-            <div style="margin-top: 40px; background: var(--ctp-base); color: var(--ctp-blue); padding: 12px 45px; border-radius: 50px; font-weight: 700; letter-spacing: 1px;">
-                TALLER DE LÓGICA Y ALGORITMOS
-            </div>
+            <h1>Ejercicios de Programación</h1>
         </div>
     </div>
 
     <!-- Diapositiva 2: Ejercicio 1 -->
     <div class="slide-container" id="slide2">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 1.</span> El programa debe leer una lista de números y, al finalizar, imprimir la suma acumulada de los primeros 10 números pares.</p>
+            <p><span class="exercise-number">Ejercicio 1.</span> El programa debe leer una lista de números e imprimir la suma acumulada de los primeros 10 números pares.</p>
         </div>
         <pre><code>int main() {
   int c = 1, acum = 0, numero;
@@ -219,7 +215,7 @@
     }
   }
 
-  printf("Acumulado de los primeros 10 números pares: %i", acum);
+  printf("Suma de los 10 números pares: %i", acum);
   return 0;
 }</code></pre>
     </div>
@@ -252,7 +248,7 @@ int main() {
     <!-- Diapositiva 4: Ejercicio 3 -->
     <div class="slide-container" id="slide4">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 3.</span> Una tienda vende libros a $100, cuadernos a $15.50 y plumas a $2.35. Calcule el monto total de una venta según el número de artículos vendidos.</p>
+            <p><span class="exercise-number">Ejercicio 3.</span> Una tienda vende libros ($100), cuadernos ($15.50) y plumas ($2.35). Calcule el monto total de la venta según el número de artículos.</p>
         </div>
         <pre><code>#include &lt;stdio.h&gt;
 
@@ -266,7 +262,7 @@ int main() {
 
   <span class="blank-space">____________________________________________________________;</span>
 
-  printf("Monto total de la venta: $%.2f", <span class="blank-space">_____</span>);
+  printf("Venta total: $%.2f", <span class="blank-space">_____</span>);
   return 0;
 }</code></pre>
     </div>
@@ -299,7 +295,7 @@ int main() {
     <!-- Diapositiva 6: Ejercicio 5 - Parte A -->
     <div class="slide-container" id="slide6">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 5.</span> Leer un carácter y dos números enteros. Si el carácter es un operador aritmético calcular la operación; de lo contrario, imprimir error. (Parte 1)</p>
+            <p><span class="exercise-number">Ejercicio 5.</span> Leer un carácter y dos números enteros. Si el carácter es un operador aritmético, calcular la operación; si no, imprimir error. (Parte 1)</p>
         </div>
         <pre><code>#include &lt;stdio.h&gt;
 
@@ -321,7 +317,7 @@ int main() {
     <!-- Diapositiva 7: Ejercicio 5 - Parte B -->
     <div class="slide-container" id="slide7">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 5.</span> Lógica de la calculadora (Parte 2).</p>
+            <p><span class="exercise-number">Ejercicio 5.</span> Lógica de la calculadora y manejo de errores. (Parte 2)</p>
         </div>
         <pre><code>    <span class="keyword">case</span> '-': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
     <span class="keyword">case</span> '*': printf("Resultado: %i", <span class="blank-space">_________</span>); <span class="keyword">break</span>;
@@ -339,13 +335,13 @@ int main() {
     <!-- Diapositiva 8: Ejercicio 6 -->
     <div class="slide-container" id="slide8">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 6.</span> Introducir un número entero y contar sus dígitos (do-while).</p>
+            <p><span class="exercise-number">Ejercicio 6.</span> Introducir un número entero y contar cuántos dígitos tiene utilizando una estructura do-while.</p>
         </div>
         <pre><code>#include &lt;stdio.h&gt;
 
 int main() {
   int n, c = <span class="blank-space">____</span>;
-  printf("Dame un número entero: ");
+  printf("Ingrese un número entero: ");
   scanf("<span class="blank-space">%i</span>", <span class="blank-space">&n</span>);
 
   <span class="blank-space">do</span>
@@ -354,7 +350,7 @@ int main() {
     c = <span class="blank-space">________</span>;
   } <span class="blank-space">while (_______)</span>;
 
-  printf("El número tiene %i dígitos", <span class="blank-space">c</span>);
+  printf("El número tiene %i dígitos", c);
   return 0;
 }</code></pre>
     </div>
@@ -362,7 +358,7 @@ int main() {
     <!-- Diapositiva 9: Ejercicio 7 -->
     <div class="slide-container" id="slide9">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 7.</span> Calcular la serie armónica utilizando <strong>for</strong>:</p>
+            <p><span class="exercise-number">Ejercicio 7.</span> Calcular la suma de la serie armónica utilizando un ciclo <strong>for</strong>:</p>
             <div class="math-series">
                 1 + <div class="fraction"><span class="num">1</span><span class="den">2</span></div> + ... + <div class="fraction"><span class="num">1</span><span class="den">d</span></div>
             </div>
@@ -370,14 +366,14 @@ int main() {
         <pre><code>int main() {
   <span class="blank-space">____</span> d, i;
   <span class="blank-space">_____</span> suma = <span class="blank-space">0</span>;
-  printf("Dame d: "); scanf("%i", &d);
+  printf("Ingrese el valor de d: "); scanf("%i", &d);
 
   for (<span class="blank-space">_______</span>; <span class="blank-space">_______</span>; <span class="blank-space">_______</span>) 
   {
     suma = <span class="blank-space">____________________</span>;
   }
 
-  printf("Suma: %f", suma);
+  printf("Suma total: %f", suma);
   return 0;
 }</code></pre>
     </div>
@@ -385,7 +381,7 @@ int main() {
     <!-- Diapositiva 10: Ejercicio 8 -->
     <div class="slide-container" id="slide10">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 8.</span> Sumar elementos de un arreglo inicializado.</p>
+            <p><span class="exercise-number">Ejercicio 8.</span> Sumar los elementos de un arreglo unidimensional inicializado de 10 enteros.</p>
         </div>
         <pre><code>int main() {
   int x[10]={6,7,9,2,4,7,4,3,2,9};
@@ -396,7 +392,7 @@ int main() {
     <span class="blank-space">___________</span>;
   }
 
-  printf("La suma es %i", s);
+  printf("La suma total es %i", s);
   return 0;
 }</code></pre>
     </div>
@@ -404,7 +400,7 @@ int main() {
     <!-- Diapositiva 11: Ejercicio 9 - Parte 1 -->
     <div class="slide-container" id="slide11">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 9.</span> Subprogramas y funciones. (Parte 1)</p>
+            <p><span class="exercise-number">Ejercicio 9.</span> Uso de subprogramas y funciones para el procesamiento de datos. (Parte 1)</p>
         </div>
         <pre><code>#include &lt;stdio.h&gt;
 int d;
@@ -427,7 +423,7 @@ float Subpro_3 (<span class="blank-space">_______ r</span>, float s) {
     <!-- Diapositiva 12: Ejercicio 9 - Parte 2 -->
     <div class="slide-container" id="slide12">
         <div class="description-box">
-            <p><span class="exercise-number">Ejercicio 9.</span> Función principal (Parte 2).</p>
+            <p><span class="exercise-number">Ejercicio 9.</span> Función principal y llamada a subprogramas. (Parte 2)</p>
         </div>
         <pre><code>int main() {
     float a = 7, b = 5, c;
@@ -452,7 +448,7 @@ float Subpro_3 (<span class="blank-space">_______ r</span>, float s) {
         </div>
         <div class="solution-grid">
             <div>
-                <pre><code><span class="comment">// 1. While</span>
+                <pre><code><span class="comment">// 1. While (Pares)</span>
 <span class="keyword">while</span> (c <= <span class="number">10</span>)
 <span class="keyword">scanf</span>(<span class="string">"%i"</span>, &n);
 acum += n; c++;</code></pre>
@@ -464,10 +460,10 @@ venta = (lib*p_lib) +
         (cua*p_cua)...;</code></pre>
             </div>
             <div>
-                <pre><code><span class="comment">// 5. Calc</span>
+                <pre><code><span class="comment">// 5. Calculadora</span>
 <span class="keyword">switch</span>(op) {
   <span class="keyword">case</span> <span class="string">'/'</span>: res = n1/n2;
-  <span class="keyword">default</span>: printf(<span class="string">"Err"</span>);
+  <span class="keyword">default</span>: printf(<span class="string">"Error"</span>);
 }</code></pre>
             </div>
             <div>
