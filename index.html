@@ -282,6 +282,63 @@
             color: var(--ctp-blue);
             font-weight: 700;
         }
+
+        /* Tablas de potencias por base */
+        .power-tables {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            flex-grow: 1;
+            align-items: start;
+        }
+
+        .power-table {
+            background: var(--ctp-crust);
+            border: 1px solid var(--ctp-surface0);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            padding: 20px 18px;
+            border-top: 4px solid var(--ctp-blue);
+        }
+
+        .power-table:nth-child(2) { border-top-color: var(--ctp-peach); }
+        .power-table:nth-child(3) { border-top-color: var(--ctp-mauve); }
+
+        .power-table h3 {
+            margin: 0 0 12px;
+            font-family: "Merriweather", serif;
+            font-size: 20px;
+            color: var(--ctp-subtext1);
+            text-align: center;
+        }
+
+        .power-table table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Fira Code', monospace;
+            font-size: 16px;
+        }
+
+        .power-table th {
+            color: var(--ctp-overlay1);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 6px 4px;
+            border-bottom: 2px solid var(--ctp-surface1);
+            text-align: center;
+        }
+
+        .power-table td {
+            padding: 5px 4px;
+            text-align: center;
+            color: var(--ctp-text);
+            border-bottom: 1px solid var(--ctp-surface0);
+        }
+
+        .power-table tr:last-child td { border-bottom: none; }
+        .power-table .exp { color: var(--ctp-mauve); font-weight: 700; }
+        .power-table .val { color: var(--ctp-peach); font-weight: 700; }
     </style>
 </head>
 <body>
@@ -612,6 +669,56 @@ c = Subpro_3(a, b);
         </div>
     </div> -->
 
+    <!-- Diapositiva 22: Tablas de potencias por base -->
+    <div class="slide-container" id="slide22">
+        <div class="description-box" style="border-left-color: var(--ctp-peach);">
+            <p><span class="exercise-number">Referencia.</span> Tablas de <strong>potencias de cada base</strong> numérica. Úsalas para convertir cualquier número a decimal: multiplica cada dígito por la potencia de su posición.</p>
+        </div>
+        <div class="power-tables">
+            <div class="power-table">
+                <h3>Binario — base <span class="base-u">₂</span></h3>
+                <table>
+                    <tr><th>Posición</th><th>Potencia</th><th>Valor</th></tr>
+                    <tr><td class="exp">0</td><td>2⁰</td><td class="val">1</td></tr>
+                    <tr><td class="exp">1</td><td>2¹</td><td class="val">2</td></tr>
+                    <tr><td class="exp">2</td><td>2²</td><td class="val">4</td></tr>
+                    <tr><td class="exp">3</td><td>2³</td><td class="val">8</td></tr>
+                    <tr><td class="exp">4</td><td>2⁴</td><td class="val">16</td></tr>
+                    <tr><td class="exp">5</td><td>2⁵</td><td class="val">32</td></tr>
+                    <tr><td class="exp">6</td><td>2⁶</td><td class="val">64</td></tr>
+                    <tr><td class="exp">7</td><td>2⁷</td><td class="val">128</td></tr>
+                    <tr><td class="exp">8</td><td>2⁸</td><td class="val">256</td></tr>
+                    <tr><td class="exp">9</td><td>2⁹</td><td class="val">512</td></tr>
+                    <tr><td class="exp">10</td><td>2¹⁰</td><td class="val">1024</td></tr>
+                </table>
+            </div>
+            <div class="power-table">
+                <h3>Octal — base <span class="base-u">₈</span></h3>
+                <table>
+                    <tr><th>Posición</th><th>Potencia</th><th>Valor</th></tr>
+                    <tr><td class="exp">0</td><td>8⁰</td><td class="val">1</td></tr>
+                    <tr><td class="exp">1</td><td>8¹</td><td class="val">8</td></tr>
+                    <tr><td class="exp">2</td><td>8²</td><td class="val">64</td></tr>
+                    <tr><td class="exp">3</td><td>8³</td><td class="val">512</td></tr>
+                    <tr><td class="exp">4</td><td>8⁴</td><td class="val">4096</td></tr>
+                    <tr><td class="exp">5</td><td>8⁵</td><td class="val">32768</td></tr>
+                </table>
+            </div>
+            <div class="power-table">
+                <h3>Hexadecimal — base <span class="base-u">₁₆</span></h3>
+                <table>
+                    <tr><th>Posición</th><th>Potencia</th><th>Valor</th></tr>
+                    <tr><td class="exp">0</td><td>16⁰</td><td class="val">1</td></tr>
+                    <tr><td class="exp">1</td><td>16¹</td><td class="val">16</td></tr>
+                    <tr><td class="exp">2</td><td>16²</td><td class="val">256</td></tr>
+                    <tr><td class="exp">3</td><td>16³</td><td class="val">4096</td></tr>
+                    <tr><td class="exp">4</td><td>16⁴</td><td class="val">65536</td></tr>
+                    <tr><td class="exp">5</td><td>16⁵</td><td class="val">1048576</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <!-- Diapositiva 14: Ejercicio 10 - Decimal a Binario (a mano) -->
     <div class="slide-container" id="slide14">
         <div class="description-box">
@@ -726,6 +833,7 @@ c = Subpro_3(a, b);
             <div class="exercise-item"><span class="letter">h)</span> 100<span class="base-u">₁₆</span> → decimal <span class="answer">= <span class="blank-space">__________</span><span class="base-u">₁₀</span></span></div>
         </div>
     </div>
+
 
 </body>
 </html>
