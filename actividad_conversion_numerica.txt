@@ -1,0 +1,34 @@
+ACTIVIDAD: EJERCICIOS DE PROGRAMACIÓN EN C Y CONVERSIÓN DE BASES NUMÉRICAS
+==========================================================================
+Materia: Programación / Lenguaje C
+
+Los ejercicios se encuentran en el material compartido en esta clase
+(diapositivas con los enunciados de los ejercicios 1-17).
+
+INSTRUCCIONES
+-------------
+1. Resuelve TODOS los ejercicios en tu CUADERNO, a mano, mostrando todo el
+   procedimiento paso a paso (no solo el resultado final).
+2. En los ejercicios de programación (1-9) escribe el código COMPLETO con
+   los espacios en blanco llenos.
+3. En los ejercicios de conversión de bases (10-17) muestra el procedimiento:
+   divisiones sucesivas para decimal → binario/octal/hexadecimal, y potencias
+   de la base para binario/octal/hexadecimal → decimal. Indica siempre la
+   base del resultado (ejemplo: 127₁₀ = 1111111₂).
+
+ENTREGA
+-------
+- Toma UNA FOTO por cada ejercicio (1-17), que se vea claro todo lo que
+  escribiste en el cuaderno.
+- Nombra cada foto con el número de ejercicio:
+  Apellido_Ej01.jpg, Apellido_Ej02.jpg, ... , Apellido_Ej17.jpg
+- Sube TODAS las fotos como respuesta a esta tarea en Google Classroom.
+- No se aceptan fotos borrosas o sin el procedimiento mostrado.
+
+FECHA LÍMITE: [colocar fecha]
+
+CRITERIOS DE EVALUACIÓN
+-----------------------
+- Procedimiento / código correcto paso a paso: 70%
+- Resultado final correcto (con base indicada en las conversiones): 20%
+- Orden, limpieza y foto legible: 10%
