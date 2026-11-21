@@ -184,6 +184,65 @@
             font-size: 14px;
             color: var(--ctp-overlay1);
         }
+
+        /* Conversión numérica (a mano) */
+        .conv-steps {
+            background: var(--ctp-crust);
+            border: 1px solid var(--ctp-surface0);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            padding: 25px 30px;
+            width: 100%;
+            font-family: 'Fira Code', monospace;
+            font-size: 19px;
+            line-height: 2.0;
+            flex-grow: 1;
+        }
+
+        .conv-step {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .conv-arrow { color: var(--ctp-mauve); font-weight: 700; }
+        .conv-residuo { color: var(--ctp-peach); font-weight: 700; }
+
+        .conv-result {
+            margin-top: 18px;
+            padding: 14px 22px;
+            background: var(--ctp-mantle);
+            border-left: 5px solid var(--ctp-green);
+            border-radius: 0 12px 12px 0;
+            font-size: 21px;
+            font-weight: 700;
+            color: var(--ctp-text);
+            font-family: 'Fira Code', monospace;
+        }
+
+        .conv-expansion {
+            background: var(--ctp-crust);
+            border: 1px solid var(--ctp-surface0);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            padding: 25px 30px;
+            width: 100%;
+            font-family: 'Fira Code', monospace;
+            font-size: 19px;
+            line-height: 2.0;
+            flex-grow: 1;
+        }
+
+        .base-tag {
+            color: var(--ctp-blue);
+            font-weight: 700;
+            font-size: 0.85em;
+            vertical-align: sub;
+        }
+
+        .pot-term { color: var(--ctp-mauve); }
+        .pot-val  { color: var(--ctp-peach); }
     </style>
 </head>
 <body>
@@ -513,6 +572,87 @@ c = Subpro_3(a, b);
             </div>
         </div>
     </div> -->
+
+    <!-- Diapositiva 14: Ejercicio 10 - Decimal a Binario (a mano) -->
+    <div class="slide-container" id="slide14">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 10.</span> Convierte el número decimal <strong>127</strong> a <strong>binario</strong> (base 2) en tu cuaderno usando <strong>divisiones sucesivas entre 2</strong>. Anota cada residuo.</p>
+        </div>
+        <div class="conv-steps">
+            <div class="conv-step">127 <span class="conv-arrow">÷</span> 2 = 63 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-step">&nbsp;&nbsp;63 <span class="conv-arrow">÷</span> 2 = 31 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-step">&nbsp;&nbsp;31 <span class="conv-arrow">÷</span> 2 = 15 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-step">&nbsp;&nbsp;15 <span class="conv-arrow">÷</span> 2 = &nbsp;7 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-step">&nbsp;&nbsp;&nbsp;7 <span class="conv-arrow">÷</span> 2 = &nbsp;3 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-step">&nbsp;&nbsp;&nbsp;3 <span class="conv-arrow">÷</span> 2 = &nbsp;1 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-step">&nbsp;&nbsp;&nbsp;1 <span class="conv-arrow">÷</span> 2 = &nbsp;0 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-result">Lee los residuos de <span class="conv-arrow">abajo hacia arriba</span>: 127<sub>10</sub> = <span class="blank-space">_______________</span><span class="base-tag">2</span></div>
+        </div>
+    </div>
+
+    <!-- Diapositiva 15: Ejercicio 11 - Decimal a Octal (a mano) -->
+    <div class="slide-container" id="slide15">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 11.</span> Convierte el número decimal <strong>345</strong> a <strong>octal</strong> (base 8) en tu cuaderno usando <strong>divisiones sucesivas entre 8</strong>. Anota cada residuo.</p>
+        </div>
+        <div class="conv-steps">
+            <div class="conv-step">345 <span class="conv-arrow">÷</span> 8 = 43 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-step">&nbsp;&nbsp;43 <span class="conv-arrow">÷</span> 8 = &nbsp;5 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-step">&nbsp;&nbsp;&nbsp;5 <span class="conv-arrow">÷</span> 8 = &nbsp;0 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span></div>
+            <div class="conv-result">Lee los residuos de <span class="conv-arrow">abajo hacia arriba</span>: 345<sub>10</sub> = <span class="blank-space">_______________</span><span class="base-tag">8</span></div>
+        </div>
+    </div>
+
+    <!-- Diapositiva 16: Ejercicio 12 - Decimal a Hexadecimal (a mano) -->
+    <div class="slide-container" id="slide16">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 12.</span> Convierte el número decimal <strong>2748</strong> a <strong>hexadecimal</strong> (base 16) en tu cuaderno usando <strong>divisiones sucesivas entre 16</strong>. Recuerda: residuos 10–15 = A–F.</p>
+        </div>
+        <div class="conv-steps">
+            <div class="conv-step">2748 <span class="conv-arrow">÷</span> 16 = 171 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span> (= <span class="blank-space">___</span>)</div>
+            <div class="conv-step">&nbsp;&nbsp;171 <span class="conv-arrow">÷</span> 16 = &nbsp;10 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span> (= <span class="blank-space">___</span>)</div>
+            <div class="conv-step">&nbsp;&nbsp;&nbsp;10 <span class="conv-arrow">÷</span> 16 = &nbsp;&nbsp;0 <span class="conv-arrow">→</span> residuo <span class="blank-space">___</span> (= <span class="blank-space">___</span>)</div>
+            <div class="conv-result">Lee los residuos de <span class="conv-arrow">abajo hacia arriba</span>: 2748<sub>10</sub> = <span class="blank-space">_______________</span><span class="base-tag">16</span></div>
+        </div>
+    </div>
+
+    <!-- Diapositiva 17: Ejercicio 13 - Binario a Decimal (a mano) -->
+    <div class="slide-container" id="slide17">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 13.</span> Convierte el número binario <strong>110101</strong><span class="base-tag">2</span> a <strong>decimal</strong> en tu cuaderno, multiplicando cada dígito por su potencia de 2 correspondiente.</p>
+        </div>
+        <div class="conv-expansion">
+            <div>110101₂ = 1×2<span class="pot-val">⁵</span> + 1×2<span class="pot-val">⁴</span> + 0×2<span class="pot-val">³</span> + 1×2<span class="pot-val">²</span> + 0×2<span class="pot-val">¹</span> + 1×2<span class="pot-val">⁰</span></div>
+            <div>= <span class="blank-space">_____</span> + <span class="blank-space">_____</span> + <span class="blank-space">_____</span> + <span class="blank-space">_____</span> + <span class="blank-space">_____</span> + <span class="blank-space">_____</span></div>
+            <div class="conv-result">110101₂ = <span class="blank-space">_______________</span><span class="base-tag">10</span></div>
+        </div>
+    </div>
+
+    <!-- Diapositiva 18: Ejercicio 14 - Octal a Decimal (a mano) -->
+    <div class="slide-container" id="slide18">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 14.</span> Convierte el número octal <strong>753</strong><span class="base-tag">8</span> a <strong>decimal</strong> en tu cuaderno, multiplicando cada dígito por su potencia de 8 correspondiente.</p>
+        </div>
+        <div class="conv-expansion">
+            <div>753₈ = 7×8<span class="pot-val">²</span> + 5×8<span class="pot-val">¹</span> + 3×8<span class="pot-val">⁰</span></div>
+            <div>= <span class="blank-space">_____</span> + <span class="blank-space">_____</span> + <span class="blank-space">_____</span></div>
+            <div>= <span class="blank-space">_______________________</span></div>
+            <div class="conv-result">753₈ = <span class="blank-space">_______________</span><span class="base-tag">10</span></div>
+        </div>
+    </div>
+
+    <!-- Diapositiva 19: Ejercicio 15 - Hexadecimal a Decimal (a mano) -->
+    <div class="slide-container" id="slide19">
+        <div class="description-box">
+            <p><span class="exercise-number">Ejercicio 15.</span> Convierte el número hexadecimal <strong>1A3F</strong><span class="base-tag">16</span> a <strong>decimal</strong> en tu cuaderno. Recuerda: A=10, B=11, C=12, D=13, E=14, F=15.</p>
+        </div>
+        <div class="conv-expansion">
+            <div>1A3F₁₆ = 1×16<span class="pot-val">³</span> + A×16<span class="pot-val">²</span> + 3×16<span class="pot-val">¹</span> + F×16<span class="pot-val">⁰</span></div>
+            <div>= 1×<span class="blank-space">_____</span> + <span class="blank-space">_____</span>×<span class="blank-space">_____</span> + 3×<span class="blank-space">_____</span> + <span class="blank-space">_____</span>×<span class="blank-space">_____</span></div>
+            <div>= <span class="blank-space">_____</span> + <span class="blank-space">_____</span> + <span class="blank-space">_____</span> + <span class="blank-space">_____</span></div>
+            <div class="conv-result">1A3F₁₆ = <span class="blank-space">_______________</span><span class="base-tag">10</span></div>
+        </div>
+    </div>
 
 </body>
 </html>
